@@ -1,96 +1,134 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;500&display=swap');
-body {
-    background-color: #FDFDFD;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.container {
-    width: 90%;
-    margin: 0 auto;
-}
-.header {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin-top: 5vh;
-    padding: 10px;
-    border-bottom: 1px solid black;
-}
-.image {
-    padding-left: 100px;
-    min-width: 20%;
-}
-.bio {
-    margin: auto;
-    width: 70%;
-    font-size: large;
-    font-family: 'Roboto Mono', monospace;
-}
-a {
-    text-decoration: none;
-    color: black;
-    border-bottom: 1px solid black ;
-}
-.my-photo {
-    width: 150px;
-    height: auto;
-}
-
-.info {
-    width: 100%;
-    display: flex;
-    height: 500px;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: baseline;
-    font-family: 'Roboto Mono', monospace;
-    font-size: small;
-    margin-top: 5vh;
-}
-
-
-.education, .hobbies, .work {
-    width: 30%;
-    min-width: 300px;
-    padding: 5px;
-    border-right: 1px solid black;
+body {
     text-align: center;
-    margin-top:10px;
-    height: 100%;
-
+    background-color: #2A2C7A;
+    color: white;
 }
 
 
-.work {
-    border: none;
+h1 {
+    font-size: 2vw;
 }
+
+p, li {
+    font-size:1vw ;
+
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+}
+
+header {
+    background: url("./public/waves.svg");
+    height: 300px;
+    margin-bottom: 25px;
+
+}
+
+header h1 {
+    padding-top: 100px;
+}
+
+.my-name {
+    display: block;
+    font-size: 300%;
+    margin-top: 10px;
+    width: auto;
+    transform: translateY(10px);
+    letter-spacing: 10px;
+    cursor: pointer;
+    color: rgba(246,76,114, 0.8);
+}
+.about-me {
+    display: block;
+    height: 300px;
+    background-color: #242852;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.about-me h1 {
+    font-size: 5vh;
+    padding-bottom: 20px;
+}
+
+.about-me p {
+    width: 100%;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    color: rgba(246,76,114, 1);;
+    text-decoration: underline;
+}
+
 
 ul, ol {
+    display: table; 
+    margin: 0 auto 10px;
     text-align: left;
-    font-size: medium;
-    padding-right: 10px;
-}
-@media screen and (max-width: 700px) {
-    .my-photo {
-        width: 250px;
-        height: auto;
-    }
-    .education, .hobbies, .work { 
-        width: 100%;
-        border: none;
-        border-bottom: 1px solid black;
-        margin-top: 10px;
-    }
-    .image {
-        padding: 0;
-    }
-    .hobbies {
-        height: auto;
-    }
-    .info {
-        height: auto;
-    }
 }
 
+.list {
+    border-bottom: 1px solid rgba(246,76,114, 0.5);
+}
+
+
+@media screen and (max-width: 1200px) {
+    header {
+        height: 300px;
+    }
+    h1,p,li {
+    font-size:4vw ;
+
+    }
+    .my-name{
+        transform: translateY(5px);
+    }
+  }
+
+@media screen and (max-width: 800px) {
+    header {
+        height: 200px;
+    }
+    h1,p,li {
+    font-size:4vw ;
+    }
+    .my-name{
+        transform: translateY(5px);
+    }
+  }
+
+.print {
+    position:static;
+    float: left;
+    padding: 10px;
+    font-size: 15px;
+    background-color: rgba(246,76,114, 0.5);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 15px;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.print:hover {
+    background-color: rgba(246,76,114, 1);;
+}
