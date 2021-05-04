@@ -2,95 +2,77 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tareq Khalili</title>
 </head>
 <body>
-    <div class="container">
-        <button class="print">Print Tareq's Resume</button>
-        <header>
-            <h1>
-                 hello everyone, My name is <span class="my-name">Tareq Khalili</span> 
-            </h1>
-        </header>
-        <div class="about-me">
-            <h1>About Me</h1>
-            <p>
-                I'm a student at <a href="https://www.najah.edu/en/" target="_blank">An-Najah national Universaty</a>. <br>
-                I study Computer Science and my goal is to be a <b>full stack web developer</b>.
-     
-            </p>
+    <div class="header">
+        <form action="./form/index.html">
+            <button class="app-page" type="submit">Application Page</button>
+        </form>
+        <img src="./public/hipster.svg" alt="hipster image" width="200px" >
+        <div class="name">
+            <h1>I'm <span class="border"> Tareq Khalili </span></h1>
+            <p style="letter-spacing: 5px;">FULL STACK WEB DEVELOPER</p>
         </div>
-         <div class="list" id="education">
-            <img src="./public/School.svg" width="300px" height="200px" max-width="100%" alt="">
-            <h1>Education.</h1>
-            <ol>
-                <li>I've done multiple courses in college like
-                    <ul>    
-                        <li>Programming principles  1 and 2.</li>
-                        <li>Data structure.</li>
-                        <li>And more..</li>
-                    </ul>
-                </li>
-                <li>
-                    I've taken some online courses to learn
-                    <ul>
-                        <li>Javascript.</li>
-                        <li>Node Js.</li>
-                        <li>Express Js.</li>
-                        <li>MongoDB.</li>
-                        <li>And more..</li>
-                    </ul>
-                </li>
-            </ol>  
-
-        </div>
-
-        <div class="list">
-            <img src="./public/hobbies.svg" width="300px" height="200px" max-width="100%" alt="">
-            <h1>Hobbies.</h1>
-            <ul>
-                <li>Programming</li>
-                <li>weight lifting</li>
-            </ul>
-
-        </div>
-
-
-        <div class="list" id="work">
-            <img src="./public/work.svg" width="300px" height="200px" max-width="100%" alt="">
-
-            <h1>Work experiences.</h1>
-            <ol>
-                <li>I did work at a curtain workshop
-                     <br>
-                      about 4 years.</li>
-                <li>As a kid me and my friend made a small business
-                     <br>
-                      were we fixed laptops/smartphone for low prices.</li>
-            </ol>
-        </div>          
-
-           
-       
     </div>
-    
-    <script>
-        document.getElementsByClassName('my-name')[0].addEventListener('click', () => {
-            alert("Welcome to tareq's site, please let me know if you have any questions")
-        });
-        document.getElementById('work').addEventListener('mouseover', () => {
-            document.getElementById('education').style.color = "green"
-        });
-        document.getElementById('work').addEventListener('mouseout', () => {
-            document.getElementById('education').style.color = "white"
-        });
-        document.getElementsByClassName('print')[0].addEventListener('click', () => {
-            print();
-        })
-    </script>
+    <div class="nav">
+        <button onclick="show(0)" class="btn">About</button>
+        <button onclick="show(1)" class="btn">Education</button>
+        <button onclick="show(2)" class="btn">Work Experience</button>
+        <button onclick="show(3)" class="btn">Hobbies</button>
+    </div>
+    <div class="bio">
+        <div class="about">
+            <img src="./public/aboutH.svg" width="310px" alt="about" height="250px">
+            <div class="me">
+                <h1>About Me</h1>
+                <p>
+                    I'm a student at <a href="https://www.najah.edu/en/" target="_blank">An-Najah national Universaty</a>. <br>
+                    I study Computer Science and my goal is to be a <b>full stack web developer</b>.
+         
+                </p>
+            </div>
+        </div>
+        <div class="about">
+            <img src="./public/educationH.svg " width="300px" height="250px" alt="about">
+            <div class="me">
+                <h1>Education</h1>
+                <p>
+                    I'm in my second year in the universaty pursuing bachelor's degree,
+                    <br>
+                    and my GBA at high school was 92.6 
+                </p>
+            </div>
+        </div>
+        <div class="about">
+            <img src="./public/workH.svg" width="300px" height="250px" alt="about">
+            <div class="me">
+                <h1>Work Experience</h1>
+                    <ul>
+                        <li>
+                            I worked at a curtain workshop about 4 years.
+                        </li>
+                        <li>
+                            As a kid me and my friend made a small business
+                              were we fixed laptops.
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="about">
+            <img src="./public/hobbieH.svg" width="300px" height="250px" alt="about">
+            <div class="me">
+                <h1>Hobbies</h1>
+                <ul>
+                    <li>Programming</li>
+                    <li>weight lifting</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
-
